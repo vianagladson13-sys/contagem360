@@ -1,0 +1,376 @@
+/* ==========================================
+            RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background:#f5f7fa;
+    color:#212529;
+}
+
+/* ==========================================
+            NAVBAR
+========================================== */   
+#xbox{
+    color:#fc760e;
+    font-family:  oswald,sans-serif;
+
+}
+.navbar{
+    padding:18px 0;
+    background:#fff !important;
+}
+
+.navbar-brand{
+    text-decoration:none;
+}
+
+.navbar-brand h4{
+    color:#0d6efd;
+    font-size:32px;
+    font-family:  oswald,sans-serif;
+}
+
+.navbar-brand small{
+    font-size:.75rem;
+}
+
+.nav-link{
+    font-weight:500;
+    color:#444 !important;
+    margin:0 8px;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#0d6efd !important;
+}
+
+.nav-link.active{
+    color:#fc760e !important;
+}
+
+.btn-primary{
+    background-color:#fc760e !important;
+    border-radius:30px;
+    padding:10px 25px;
+    font-weight:600;
+}
+
+
+/* ==========================================
+            HERO
+========================================== */
+
+.hero{
+
+    padding:80px 0;
+
+}
+
+.hero h1{
+
+    font-weight:700;
+    color:#1f2937;
+    line-height:1.2;
+
+}
+
+.hero p{
+
+    color:#6c757d;
+
+}
+
+.hero-img{
+
+    max-width:100%;
+    border-radius:20px;
+
+}
+
+.card{
+
+    border-radius:20px;
+
+}
+
+.card-body{
+
+    padding:35px;
+
+}
+
+.form-control{
+
+    height:48px;
+    border-radius:10px;
+
+}
+
+.form-control:focus{
+
+    box-shadow:none;
+    border-color:#0d6efd;
+
+}
+
+/* ==========================================
+            BENEFÍCIOS
+========================================== */
+
+.bg-light{
+
+    background:#eef2f7 !important;
+
+}
+
+.card i{
+
+    color:#0d6efd;
+
+}
+
+.card h4{
+
+    font-size:1.3rem;
+    font-weight:600;
+
+}
+
+.card p{
+
+    color:#6c757d;
+
+}
+/* ==========================================
+            FOOTER
+========================================== */
+
+.footer{
+
+    background:#1f2937;
+    color:white;
+
+}
+
+.footer h3{
+
+    font-weight:700;
+    margin-bottom:20px;
+
+}
+
+.footer h5{
+
+    font-weight:600;
+    margin-bottom:20px;
+
+}
+
+.footer p{
+
+    color:#cfd4da;
+    line-height:1.7;
+
+}
+
+.footer ul{
+
+    padding:0;
+    margin:0;
+
+}
+
+.footer li{
+
+    list-style:none;
+    margin-bottom:12px;
+
+}
+
+.footer a{
+
+    color:#cfd4da;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+.footer a:hover{
+
+    color:#0d6efd;
+
+}
+
+.footer .input-group{
+
+    border-radius:12px;
+    overflow:hidden;
+
+}
+
+.footer .form-control{
+
+    border:none;
+    box-shadow:none;
+
+}
+
+.footer .btn{
+
+    border-radius:0;
+
+}
+
+.footer hr{
+
+    border-color:rgba(255,255,255,.15);
+
+}
+
+/* ==========================================
+            CARDS
+========================================== */
+
+.card{
+
+    transition:.3s;
+    border:none;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 .8rem 2rem rgba(0,0,0,.12);
+
+}
+.btn-fechar{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    color:#0e89fc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:0.3s;
+}
+
+.btn-fechar:hover{
+    transform:rotate(90deg);
+}
+
+.card{
+    border-radius:20px;
+}
+  
+/* ==========================================
+            BOTÕES
+========================================== */
+
+.btn{
+
+    transition:.3s;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.btn-outline-primary:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+            RESPONSIVIDADE
+========================================== */
+
+@media (max-width:991px){
+
+    .navbar-brand h4{
+        
+        font-size:1.2rem;
+
+    }
+
+    .navbar-nav{
+
+        text-align:center;
+        margin-top:20px;
+
+    }
+
+    .navbar .d-flex{
+
+        justify-content:center;
+        margin-top:20px;
+
+    }
+
+    .hero{
+
+        text-align:center;
+        padding:50px 0;
+
+    }
+
+    .hero-img{
+
+        margin:35px 0;
+
+    }
+
+    .footer{
+
+        text-align:center;
+
+    }
+
+    .footer .d-flex{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero h1{
+
+        font-size:2rem;
+
+    }
+
+    .display-5{
+
+        font-size:2rem;
+
+    }
+
+    .btn-lg{
+
+        width:100%;
+
+    }
+
+    .hero .d-flex{
+
+        flex-direction:column;
+
+    }
+
+}
