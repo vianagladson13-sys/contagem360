@@ -9,70 +9,64 @@ $(document).ready(function () {
 });
 
 function aplicarMascaras() {
-  // CPF no formato: 000.000.000-00
-  $("#cpf").mask("000.000.000-00");
+  // Preço no formato: 1.234,56
+  $("#preco").mask("000.000.000,00", {
+    reverse: true,
+  });
 
-  // Telefone no formato: (31) 99999-9999
-  $("#telefone").mask("(00) 00000-0000");
+  // Permite até 6 números
+  $("#quantidade").mask("000000");
 }
 
 function validarFormulario() {
+
   // Seleciona a div responsável pelas mensagens
   const mensagem = document.getElementById("mensagem");
 
   // Impede o formulário de recarregar a página
-  $("#formCliente").on("submit", function (evento) {
+  $("#formProduto").on("submit", function (evento) {
     evento.preventDefault();
   });
 
   // Configura o jQuery Validation
-  $("#formCliente").validate({
+  $("#formProduto").validate({
     // Regras de validação
     rules: {
       nome: {
         required: true,
         minlength: 3,
-        maxlength: 100,
       },
-      cpf: {
+      categoria: {
         required: true,
-        minlength: 14,
-        maxlength: 14,
+        minlength: 3,
       },
-      email: {
+      preco: {
         required: true,
-        email: true,
       },
-      telefone: {
+      quantidade: {
         required: true,
-        minlength: 15,
-        maxlength: 15,
+        digits: true,
+        min: 1,
       },
     },
 
     // Mensagens em português
     messages: {
       nome: {
-        required: "Informe o nome do cliente.",
+        required: "Informe o nome do produto.",
         minlength: "O nome deve ter pelo menos 3 caracteres.",
-        maxlength: "O nome deve ter no máximo 100 caracteres.",
       },
-
-      cpf: {
-        required: "Informe o CPF do cliente.",
-        minlength: "Informe um CPF válido.",
-        maxlength: "Informe um CPF válido.",
+      categoria: {
+        required: "Informe a categoria do produto.",
+        minlength: "A categoria deve ter pelo menos 3 caracteres.",
       },
-
-      email: {
-        required: "Informe o e-mail do cliente.",
-        email: "Informe um e-mail válido.",
+      preco: {
+        required: "Informe o preço do produto.",
       },
-
-      telefone: {
-        required: "Informe o telefone do cliente.",
-        minlength: "Informe um telefone válido.",
-        maxlength: "Informe um telefone válido.",
+      quantidade: {
+        required: "Informe a quantidade.",
+        digits: "Digite somente números inteiros.",
+        min: "A quantidade deve ser maior ou igual a 1.",
       },
     },
 
@@ -97,24 +91,19 @@ function validarFormulario() {
       const dados = new FormData(formulario);
 
       /*
-       * Remove a máscara do CPF:
-       * Formato exibido: 000.000.000-00
-       * Formato enviado: 00000000000
+       * Converte o preço:
+       * Formato exibido: 1.234,56
+       * Formato enviado: 1234.56
        */
-      const cpf = $("#cpf").val().replace(/\D/g, "");
+      const precoConvertido = $("#preco")
+        .val()
+        .replace(/\./g, "")
+        .replace(",", ".");
 
-      /*
-       * Remove a máscara do telefone:
-       * Formato exibido: (31) 99999-9999
-       * Formato enviado: 31999999999
-       */
-      const telefone = $("#telefone").val().replace(/\D/g, "");
+      // Substitui o preço mascarado pelo preço convertido
+      dados.set("preco", precoConvertido);
 
-      // Substitui os valores mascarados pelos valores sem máscara
-      dados.set("cpf", cpf);
-      dados.set("telefone", telefone);
-
-      // Mostra os dados no console
+      //Mostra os dados no console
       console.table(Object.fromEntries(dados.entries()));
 
       // Exibe mensagem enquanto envia
@@ -123,7 +112,7 @@ function validarFormulario() {
 
       try {
         // Envia os dados para o Controller
-        const resposta = await fetch("controllers/ClienteController.php", {
+        const resposta = await fetch("controllers/ProdutoController.php", {
           method: "POST",
           body: dados,
         });
@@ -131,23 +120,19 @@ function validarFormulario() {
         // Converte a resposta JSON
         const resultado = await resposta.json();
 
-        // console.log(resultado);
+        //console.log(resultado);
 
         // Verifica se ocorreu erro HTTP
         if (!resposta.ok) {
           mensagem.className = "alert alert-danger mt-3";
-
           let conteudo = `<strong>${resultado.mensagem}</strong>`;
-
           if (resultado.erros) {
             conteudo += "<ul class='mb-0 mt-2'>";
-
             Object.entries(resultado.erros).forEach(function ([campo, erros]) {
               erros.forEach(function (erro) {
                 conteudo += `<li>${erro}</li>`;
               });
             });
-
             conteudo += "</ul>";
           }
 
@@ -162,11 +147,11 @@ function validarFormulario() {
 
         // Limpa os campos
         formulario.reset();
+
       } catch (erro) {
         mensagem.className = "alert alert-danger mt-3";
-
         mensagem.textContent =
-          "Erro ao enviar os dados para o controller de cliente.";
+          "Erro ao enviar os dados para o controller de produto."; //Uso da constante: MSG_ERRO
 
         console.error(erro);
       }
@@ -174,7 +159,7 @@ function validarFormulario() {
   });
 
   // Quando o formulário for limpo
-  $("#formCliente").on("reset", function () {
+  $("#formProduto").on("reset", function () {
     // Remove as classes de validação
     $(this).find(".form-control").removeClass("is-valid is-invalid");
   });

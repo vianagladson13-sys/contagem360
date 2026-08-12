@@ -1,468 +1,188 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contagem 360</title>
-
-    <link rel="icon" href="img/logo.png" type="image/png">
+    <title>Login | Sistema de Cadastros</title>
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS da página -->
+    <link rel="stylesheet" href="assets/css/login.css">
 
 </head>
 
-<body>
 
-    <!-- ==========================
-            NAVBAR
-    =========================== -->
-
-    <header>
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-
-            <div class="container">
-
-                <!-- Logo -->
-
-                <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-
-                    <img src="img/logo.png" alt="Logo Contagem 360" width="150" class="me-2">
-                    <div>
-
-                        <h4 class="m-0">Contagem <span id="xbox">360</span></h4>
-
-                        <small class="text-muted">
-                            Turismo • Cultura • Eventos
-                        </small>
-
-                    </div>
-
-                </a>
-
-                <!-- Botão Mobile -->
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-
-                    <span class="navbar-toggler-icon"></span>
-
-                </button>
-
-                <!-- Menu -->
-
-                <div class="collapse navbar-collapse" id="menu">
-
-                    <ul class="navbar-nav mx-auto">
-
-                        <li class="nav-item">
-                            <a class="nav-link " href="index.html">
-                                Home
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">
-                                Eventos
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Notícias
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                O que fazer?
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Projetos Regionais
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Serviços
-                            </a>
-                        </li>
-
-                    </ul>
-
-                    <!-- Lado direito -->
-
-                    <div class="d-flex align-items-center">
-
-                        <button class="btn btn-link text-dark me-3">
-
-                            <i class="bi bi-search fs-5"></i>
-
-                        </button>
-
-                        <a href="index.html" class="btn btn-primary rounded-pill px-4">
-
-                            Entrar
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </nav>
-
-    </header>
-
-    <!-- ==========================
-            MAIN
-    =========================== -->
-    <section class="py-5 bg-light">
-
-        <div class="container">
-
-            <div class="row justify-content-center">
-
-                <div class="col-lg-8">
-
-                    <div class="card shadow-lg border-0 rounded-4 position-relative">
-
-                        <!-- Botão Fechar -->
-                        <button type="button"
-                            class="btn btn-fechar position-absolute top-0 end-0 m-3"
-                            onclick="history.back()">
-
-                            <i class="bi bi-x-lg fs-4"></i>
-
-                        </button>
-
-                        <div class="card-body p-5">
-
-                            <h2 class="text-center fw-bold mb-4">
-                                <i class="bi bi-calendar-event text-primary"></i>
-                                Login de Usuario
-                            </h2>
-
-                            <form id="formUsuario">
-                                <div class="row">
-                                    <div class="col-md-8 mb-3">
-                                        <label for="nomeUsuario" class="form-label">
-                                            Nome do Usuario
-                                        </label>
-                                        <input type="text" class="form-control" id="nomeUsuario"
-                                            placeholder="Digite o nome do usuario">
-                                        <div class="invalid-feedback">
-                                            Informe o nome do usuario.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-8 mb-3">
-                                        <label for="cpfUsuario" class="form-label">
-                                            CPF do Usuario
-                                        </label>
-                                        <input type="text" class="form-control" id="cpfUsuario"
-                                            placeholder="Digite o cpf do usuario">
-                                        <div class="invalid-feedback">
-                                            Informe o CPF do usuario.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-8 mb-3">
-                                        <label for="e-mail" class="form-label">
-                                            E-Mail do Usuario
-                                        </label>
-                                        <input type="email" class="form-control" id="e-mail"
-                                            placeholder="Digite o e-mail do usuario">
-                                        <div class="invalid-feedback">
-                                            Informe o e-mail do usuario.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="contato" class="form-label">
-                                            Contato
-                                        </label>
-                                        <input type="tel" class="form-control" id="contato"
-                                            placeholder="(31) 99999-9999">
-                                        <div class="invalid-feedback">
-                                            Informe o numero de contato.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-primary px-5">
-                                        <i class="bi bi-check-circle"></i>
-                                        Cadastrar Usuario
-                                    </button>
+<body class="bg-light">
 
 
-                                    <button type="reset" class="btn btn-outline-primary px-5 ms-2">
+    <main class="container">
 
-                                        Limpar
+        <div class="row justify-content-center align-items-center min-vh-100">
 
-                                    </button>
+            <div class="col-md-6 col-lg-4">
 
-                                </div>
 
-                            </form>
+                <!-- Card de Login -->
+                <div class="card border-0 shadow">
+
+                    <div class="card-body p-4">
+
+
+                        <!-- Cabeçalho -->
+                        <div class="text-center mb-4">
+
+                            <div class="mb-3">
+
+                                <i class="bi bi-person-circle display-3 text-primary"></i>
+
+                            </div>
+
+                            <h1 class="h3">
+                                Acessar o sistema
+                            </h1>
+
+                            <p class="text-muted">
+                                Informe seus dados de acesso.
+                            </p>
 
                         </div>
 
-                    </div>
 
-                </div>
+                        <!-- Formulário -->
+                        <form id="formLogin">
 
-            </div>
 
-        </div>
+                            <!-- E-mail -->
+                            <div class="mb-3">
 
-    </section>
-    <!-- Modal de Alerta -->
-    <div class="modal fade" id="modalAlerta" tabindex="-1" aria-labelledby="modalAlertaLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0 shadow">
+                                <label for="email" class="form-label">
+                                    E-mail
+                                </label>
 
-                <div class="modal-header bg-success text-white">
-                    <h5 class="modal-title" id="modalAlertaLabel">
-                        <i class="bi bi-check-circle-fill me-2"></i>
-                        Sucesso
-                    </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
+                                <div class="input-group">
 
-                <div class="modal-body text-center py-4">
-                    <i class="bi bi-check-circle-fill text-success" style="font-size:70px;"></i>
+                                    <span class="input-group-text">
+                                        <i class="bi bi-envelope"></i>
+                                    </span>
 
-                    <h4 class="mt-3">Evento cadastrado!</h4>
+                                    <input type="email" id="email" name="email" class="form-control"
+                                        placeholder="email@email.com">
 
-                    <p class="text-muted mb-0">
-                        O evento foi cadastrado com sucesso.
-                    </p>
-                </div>
+                                    <div class="invalid-feedback"></div>
+                                    <div class="valid-feedback"></div>
 
-                <div class="modal-footer justify-content-center">
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">
-                        OK
-                    </button>
-                </div>
+                                </div>
 
-            </div>
-        </div>
-    </div>
+                            </div>
 
 
+                            <!-- Senha -->
+                            <div class="mb-3">
 
+                                <label for="senha" class="form-label">
+                                    Senha
+                                </label>
 
+                                <div class="input-group">
 
+                                    <span class="input-group-text">
+                                        <i class="bi bi-lock"></i>
+                                    </span>
 
+                                    <input type="password" id="senha" name="senha" class="form-control"
+                                        placeholder="Digite sua senha">
 
+                                    <div class="invalid-feedback"></div>
+                                    <div class="valid-feedback"></div>
 
+                                </div>
 
-    <footer class="footer bg-dark text-light pt-5 pb-3">
+                            </div>
 
-        <div class="container">
 
-            <div class="row gy-4">
+                            <!-- Botão TODO: retornar quando estiver logando--> 
+                            <!-- <button
+                                type="submit"
+                                class="btn btn-primary w-100 mt-2">
 
-                <!-- Logo -->
+                                <i class="bi bi-box-arrow-in-right me-1"></i>
 
-                <div class="col-lg-3">
+                                Entrar
 
-                    <h3 class="fw-bold">
+                            </button> -->
 
-                        Contagem 360
+                            <a href="index.php?page=home" class="btn btn-primary w-100">
 
-                    </h3>
+                                <i class="bi bi-box-arrow-in-right me-1"></i>
+                                Entrar
 
-                    <p>
+                            </a>
 
-                        O portal oficial para quem deseja descobrir,
-                        viver e aproveitar tudo o que Contagem tem
-                        para oferecer.
 
-                    </p>
+                        </form>
 
-                    <div class="d-flex gap-3 fs-4">
 
-                        <a href="#" class="text-light">
-                            <i class="bi bi-facebook"></i>
-                        </a>
+                        <!-- Mensagem do sistema -->
+                        <div id="mensagem" class="alert d-none mt-3">
+                        </div>
 
-                        <a href="#" class="text-light">
-                            <i class="bi bi-instagram"></i>
-                        </a>
 
-                        <a href="#" class="text-light">
-                            <i class="bi bi-youtube"></i>
-                        </a>
+                        <!-- Voltar -->
+                        <div class="text-center mt-4">
 
-                    </div>
+                            <a href="index.php" class="text-decoration-none">
 
-                </div>
+                                <i class="bi bi-arrow-left me-1"></i>
 
-                <!-- Links -->
+                                Voltar para página inicial
 
-                <div class="col-lg-2">
-
-                    <h5 class="mb-3">
-
-                        Navegação
-
-                    </h5>
-
-                    <ul class="list-unstyled">
-
-                        <li><a href="#" class="text-light text-decoration-none">Home</a></li>
-
-                        <li><a href="#" class="text-light text-decoration-none">Eventos</a></li>
-
-                        <li><a href="#" class="text-light text-decoration-none">Notícias</a></li>
-
-                        <li><a href="#" class="text-light text-decoration-none">Turismo</a></li>
-
-                    </ul>
-
-                </div>
-
-                <!-- Serviços -->
-
-                <div class="col-lg-2">
-
-                    <h5 class="mb-3">
-
-                        Serviços
-
-                    </h5>
-
-                    <ul class="list-unstyled">
-
-                        <li><a href="#" class="text-light text-decoration-none">Comércio</a></li>
-
-                        <li><a href="#" class="text-light text-decoration-none">Projetos</a></li>
-
-                        <li><a href="#" class="text-light text-decoration-none">Mapa</a></li>
-
-                        <li><a href="#" class="text-light text-decoration-none">Contato</a></li>
-
-                    </ul>
-
-                </div>
-
-                <!-- Contato -->
-
-                <div class="col-lg-2">
-
-                    <h5 class="mb-3">
-
-                        Contato
-
-                    </h5>
-
-                    <p class="mb-1">
-
-                        (31) 99999-9999
-
-                    </p>
-
-                    <p class="mb-1">
-
-                        contato@contagem360.com
-
-                    </p>
-
-                    <p>
-
-                        Contagem - MG
-
-                    </p>
-
-                </div>
-
-                <!-- Newsletter -->
-
-                <div class="col-lg-3">
-
-                    <h5 class="mb-3">
-
-                        Newsletter
-
-                    </h5>
-
-                    <p>
-
-                        Receba novidades e eventos.
-
-                    </p>
-
-                    <form>
-
-                        <div class="input-group">
-
-                            <input type="email" class="form-control" placeholder="Seu e-mail">
-
-                            <button class="btn btn-primary" type="submit">
-
-                                Enviar
-
-                            </button>
+                            </a>
 
                         </div>
 
-                    </form>
+
+                    </div>
 
                 </div>
 
-            </div>
 
-            <hr class="my-4">
+                <!-- Identificação -->
+                <p class="text-center text-muted small mt-4">
 
-            <div class="row">
+                    Sistema MVC de Cadastros
 
-                <div class="col text-center">
+                </p>
 
-                    <small>
-
-                        © 2026 Contagem 360.
-                        Todos os direitos reservados.
-
-                    </small>
-
-                </div>
 
             </div>
 
         </div>
 
-    </footer>
+    </main>
 
-    <!-- Bootstrap -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery Validation -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+
+    <!-- Helpers -->
+    <script src="libs/js/helpers.js"></script>
+
+    <!-- Script da página -->
+    <script src="assets/js/login.js"></script>
 
 
 </body>
-<script src="scriptEv.js"></script>
 
 </html>

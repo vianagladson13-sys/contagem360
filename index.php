@@ -6,7 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contagem360</title>
+    <title>Sistema de Cadastros</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
@@ -43,21 +43,26 @@
 
                 <h1 class="h3 mb-3 mb-md-0">
                     <a href="index.php?page=home" class="text-white text-decoration-none">
-                        Contagem360
+                        Sistema de Cadastros
                     </a>
                 </h1>
 
                 <!-- Menu principal -->
                 <nav class="nav">
 
-                    <a href="index.php?page=landing"
-                        class="nav-link <?= $page === 'landing' ? 'text-white fw-bold' : 'text-white-50' ?>">
-                        Inicio
+                    <a href="index.php?page=produtos"
+                        class="nav-link <?= $page === 'produtos' ? 'text-white fw-bold' : 'text-white-50' ?>">
+                        Produtos
                     </a>
 
-                    <a href="index.php?page=eventos"
-                        class="nav-link <?= $page === 'eventos' ? 'text-white fw-bold' : 'text-white-50' ?>">
-                        Eventos
+                    <a href="index.php?page=clientes"
+                        class="nav-link <?= $page === 'clientes' ? 'text-white fw-bold' : 'text-white-50' ?>">
+                        Clientes
+                    </a>
+
+                    <a href="index.php?page=funcionarios"
+                        class="nav-link <?= $page === 'funcionarios' ? 'text-white fw-bold' : 'text-white-50' ?>">
+                        Funcionários
                     </a>
 
                     <a href="index.php?page=landing"
@@ -86,7 +91,7 @@
     <footer class="bg-dark text-white text-center py-3 mt-5">
 
         <p class="mb-0">
-            Contagem360
+            Sistema MVC de Cadastros
         </p>
 
     </footer>
