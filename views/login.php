@@ -1,188 +1,468 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login | Sistema de Cadastros</title>
+    <title>Contagem 360</title>
+
+    <link rel="icon" href="img/logo.png" type="image/png">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <!-- CSS da página -->
-    <link rel="stylesheet" href="assets/css/login.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
 
+<body>
 
-<body class="bg-light">
+    <!-- ==========================
+            NAVBAR
+    =========================== -->
 
+    <header>
 
-    <main class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
 
-        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="container">
 
-            <div class="col-md-6 col-lg-4">
+                <!-- Logo -->
 
+                <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
 
-                <!-- Card de Login -->
-                <div class="card border-0 shadow">
+                    <img src="img/logo.png" alt="Logo Contagem 360" width="150" class="me-2">
+                    <div>
 
-                    <div class="card-body p-4">
+                        <h4 class="m-0">Contagem <span id="xbox">360</span></h4>
 
+                        <small class="text-muted">
+                            Turismo • Cultura • Eventos
+                        </small>
 
-                        <!-- Cabeçalho -->
-                        <div class="text-center mb-4">
+                    </div>
 
-                            <div class="mb-3">
+                </a>
 
-                                <i class="bi bi-person-circle display-3 text-primary"></i>
+                <!-- Botão Mobile -->
 
-                            </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
 
-                            <h1 class="h3">
-                                Acessar o sistema
-                            </h1>
+                    <span class="navbar-toggler-icon"></span>
 
-                            <p class="text-muted">
-                                Informe seus dados de acesso.
-                            </p>
+                </button>
 
-                        </div>
+                <!-- Menu -->
 
+                <div class="collapse navbar-collapse" id="menu">
 
-                        <!-- Formulário -->
-                        <form id="formLogin">
+                    <ul class="navbar-nav mx-auto">
 
-
-                            <!-- E-mail -->
-                            <div class="mb-3">
-
-                                <label for="email" class="form-label">
-                                    E-mail
-                                </label>
-
-                                <div class="input-group">
-
-                                    <span class="input-group-text">
-                                        <i class="bi bi-envelope"></i>
-                                    </span>
-
-                                    <input type="email" id="email" name="email" class="form-control"
-                                        placeholder="email@email.com">
-
-                                    <div class="invalid-feedback"></div>
-                                    <div class="valid-feedback"></div>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- Senha -->
-                            <div class="mb-3">
-
-                                <label for="senha" class="form-label">
-                                    Senha
-                                </label>
-
-                                <div class="input-group">
-
-                                    <span class="input-group-text">
-                                        <i class="bi bi-lock"></i>
-                                    </span>
-
-                                    <input type="password" id="senha" name="senha" class="form-control"
-                                        placeholder="Digite sua senha">
-
-                                    <div class="invalid-feedback"></div>
-                                    <div class="valid-feedback"></div>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- Botão TODO: retornar quando estiver logando--> 
-                            <!-- <button
-                                type="submit"
-                                class="btn btn-primary w-100 mt-2">
-
-                                <i class="bi bi-box-arrow-in-right me-1"></i>
-
-                                Entrar
-
-                            </button> -->
-
-                            <a href="index.php?page=home" class="btn btn-primary w-100">
-
-                                <i class="bi bi-box-arrow-in-right me-1"></i>
-                                Entrar
-
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.html">
+                                Home
                             </a>
+                        </li>
 
-
-                        </form>
-
-
-                        <!-- Mensagem do sistema -->
-                        <div id="mensagem" class="alert d-none mt-3">
-                        </div>
-
-
-                        <!-- Voltar -->
-                        <div class="text-center mt-4">
-
-                            <a href="index.php" class="text-decoration-none">
-
-                                <i class="bi bi-arrow-left me-1"></i>
-
-                                Voltar para página inicial
-
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                Eventos
                             </a>
+                        </li>
 
-                        </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Notícias
+                            </a>
+                        </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                O que fazer?
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Projetos Regionais
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Serviços
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Lado direito -->
+
+                    <div class="d-flex align-items-center">
+
+                        <button class="btn btn-link text-dark me-3">
+
+                            <i class="bi bi-search fs-5"></i>
+
+                        </button>
+
+                        <a href="index.html" class="btn btn-primary rounded-pill px-4">
+
+                            Entrar
+
+                        </a>
 
                     </div>
 
                 </div>
 
+            </div>
 
-                <!-- Identificação -->
-                <p class="text-center text-muted small mt-4">
+        </nav>
 
-                    Sistema MVC de Cadastros
+    </header>
 
-                </p>
+    <!-- ==========================
+            MAIN
+    =========================== -->
+    <section class="py-5 bg-light">
 
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+
+                    <div class="card shadow-lg border-0 rounded-4 position-relative">
+
+                        <!-- Botão Fechar -->
+                        <button type="button"
+                            class="btn btn-fechar position-absolute top-0 end-0 m-3"
+                            onclick="history.back()">
+
+                            <i class="bi bi-x-lg fs-4"></i>
+
+                        </button>
+
+                        <div class="card-body p-5">
+
+                            <h2 class="text-center fw-bold mb-4">
+                                <i class="bi bi-calendar-event text-primary"></i>
+                                Login de Usuario
+                            </h2>
+
+                            <form id="formUsuario">
+                                <div class="row">
+                                    <div class="col-md-8 mb-3">
+                                        <label for="nomeUsuario" class="form-label">
+                                            Nome do Usuario
+                                        </label>
+                                        <input type="text" class="form-control" id="nomeUsuario"
+                                            placeholder="Digite o nome do usuario">
+                                        <div class="invalid-feedback">
+                                            Informe o nome do usuario.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 mb-3">
+                                        <label for="cpfUsuario" class="form-label">
+                                            CPF do Usuario
+                                        </label>
+                                        <input type="text" class="form-control" id="cpfUsuario"
+                                            placeholder="Digite o cpf do usuario">
+                                        <div class="invalid-feedback">
+                                            Informe o CPF do usuario.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 mb-3">
+                                        <label for="e-mail" class="form-label">
+                                            E-Mail do Usuario
+                                        </label>
+                                        <input type="email" class="form-control" id="e-mail"
+                                            placeholder="Digite o e-mail do usuario">
+                                        <div class="invalid-feedback">
+                                            Informe o e-mail do usuario.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="contato" class="form-label">
+                                            Contato
+                                        </label>
+                                        <input type="tel" class="form-control" id="contato"
+                                            placeholder="(31) 99999-9999">
+                                        <div class="invalid-feedback">
+                                            Informe o numero de contato.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary px-5">
+                                        <i class="bi bi-check-circle"></i>
+                                        Cadastrar Usuario
+                                    </button>
+
+
+                                    <button type="reset" class="btn btn-outline-primary px-5 ms-2">
+
+                                        Limpar
+
+                                    </button>
+
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
 
-    </main>
+    </section>
+    <!-- Modal de Alerta -->
+    <div class="modal fade" id="modalAlerta" tabindex="-1" aria-labelledby="modalAlertaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="modalAlertaLabel">
+                        <i class="bi bi-check-circle-fill me-2"></i>
+                        Sucesso
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body text-center py-4">
+                    <i class="bi bi-check-circle-fill text-success" style="font-size:70px;"></i>
+
+                    <h4 class="mt-3">Evento cadastrado!</h4>
+
+                    <p class="text-muted mb-0">
+                        O evento foi cadastrado com sucesso.
+                    </p>
+                </div>
+
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+                        OK
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <!-- jQuery Validation -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 
-    <!-- Helpers -->
-    <script src="libs/js/helpers.js"></script>
 
-    <!-- Script da página -->
-    <script src="assets/js/login.js"></script>
+
+
+
+
+    <footer class="footer bg-dark text-light pt-5 pb-3">
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <!-- Logo -->
+
+                <div class="col-lg-3">
+
+                    <h3 class="fw-bold">
+
+                        Contagem 360
+
+                    </h3>
+
+                    <p>
+
+                        O portal oficial para quem deseja descobrir,
+                        viver e aproveitar tudo o que Contagem tem
+                        para oferecer.
+
+                    </p>
+
+                    <div class="d-flex gap-3 fs-4">
+
+                        <a href="#" class="text-light">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#" class="text-light">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="#" class="text-light">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Links -->
+
+                <div class="col-lg-2">
+
+                    <h5 class="mb-3">
+
+                        Navegação
+
+                    </h5>
+
+                    <ul class="list-unstyled">
+
+                        <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+
+                        <li><a href="#" class="text-light text-decoration-none">Eventos</a></li>
+
+                        <li><a href="#" class="text-light text-decoration-none">Notícias</a></li>
+
+                        <li><a href="#" class="text-light text-decoration-none">Turismo</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Serviços -->
+
+                <div class="col-lg-2">
+
+                    <h5 class="mb-3">
+
+                        Serviços
+
+                    </h5>
+
+                    <ul class="list-unstyled">
+
+                        <li><a href="#" class="text-light text-decoration-none">Comércio</a></li>
+
+                        <li><a href="#" class="text-light text-decoration-none">Projetos</a></li>
+
+                        <li><a href="#" class="text-light text-decoration-none">Mapa</a></li>
+
+                        <li><a href="#" class="text-light text-decoration-none">Contato</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contato -->
+
+                <div class="col-lg-2">
+
+                    <h5 class="mb-3">
+
+                        Contato
+
+                    </h5>
+
+                    <p class="mb-1">
+
+                        (31) 99999-9999
+
+                    </p>
+
+                    <p class="mb-1">
+
+                        contato@contagem360.com
+
+                    </p>
+
+                    <p>
+
+                        Contagem - MG
+
+                    </p>
+
+                </div>
+
+                <!-- Newsletter -->
+
+                <div class="col-lg-3">
+
+                    <h5 class="mb-3">
+
+                        Newsletter
+
+                    </h5>
+
+                    <p>
+
+                        Receba novidades e eventos.
+
+                    </p>
+
+                    <form>
+
+                        <div class="input-group">
+
+                            <input type="email" class="form-control" placeholder="Seu e-mail">
+
+                            <button class="btn btn-primary" type="submit">
+
+                                Enviar
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row">
+
+                <div class="col text-center">
+
+                    <small>
+
+                        © 2026 Contagem 360.
+                        Todos os direitos reservados.
+
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </body>
+<script src="scriptEv.js"></script>
 
 </html>

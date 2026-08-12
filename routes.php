@@ -1,14 +1,18 @@
 <?php
 //definir url do  projeto
-
+//http://localhost/projetos-gladson/mvc/contagem-mvc/index.php?page=landing
 
 //definir páginas válidas no projeto
 $paginasValidas = [
+
+    //publico geral
     "landing" => __DIR__ . "/views/landing.php",
-    "home"    => __DIR__ . "/views/home.php",
-    "eventos"  => __DIR__ . "/views/eventos.php",
-    "noticias" => __DIR__ . "/views/noticias.php",
-    "login"   => __DIR__ . "/views/login.php",
+    "login" => __DIR__ . "/views/login.php",
+
+    
+    //usuários logados
+    "home" => __DIR__ . "/views/home.php",    
+    "eventos" => __DIR__ . "/views/evento.php",
 ];
 
 // Capturar a página informada na url 
