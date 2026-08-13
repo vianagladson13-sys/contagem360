@@ -1,58 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <title>Contagem 360</title>
 
-    <title>Sistema MVC</title>
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/landing.css">
 
 </head>
 
-<body class="bg-light">
+<body>
 
-
-    <!-- =========================================
-         CABEÇALHO DA LANDING PAGE
-    ========================================== -->
+    <!-- ==========================
+            NAVBAR
+    =========================== -->
 
     <header>
 
-        <nav class="navbar navbar-dark bg-dark py-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
 
             <div class="container">
 
-                <!-- Logo / Nome -->
-                <a href="index.php?page=landing"
-                    class="navbar-brand fw-bold">
+                <!-- Logo -->
 
-                    <i class="bi bi-grid me-2"></i>
+                <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
 
-                    Sistema MVC
+                    <img src="assets/img/logo.png" alt="Logo Contagem 360" width="150" class="me-2">
+                    <div>
 
-                </a>
+                        <h4 class="m-0">Contagem <span id="xbox">360</span></h4>
 
+                        <small class="text-muted">
+                            Turismo • Cultura • Eventos
+                        </small>
 
-                <!-- Login -->
-                <a href="index.php?page=login"
-                    class="btn btn-outline-light">
-
-                    <i class="bi bi-box-arrow-in-right me-1"></i>
-
-                    Entrar
+                    </div>
 
                 </a>
+
+                <!-- Botão Mobile -->
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <!-- Menu -->
+
+                <div class="collapse navbar-collapse" id="menu">
+
+                    <ul class="navbar-nav mx-auto">
+
+                       
+
+                    </ul>
+
+                    <!-- Lado direito -->
+
+                    <div class="d-flex align-items-center">
+
+                        <button class="btn btn-link text-dark me-3">
+
+                            <i class="bi bi-search fs-5"></i>
+
+                        </button>
+
+
+
+                        <a href="index.php?page=login"
+                            class="btn btn-primary rounded-pill px-4">
+                            <i class="bi bi-lock me-2"></i>
+                            Entrar
+                        </a>
+
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -60,63 +97,50 @@
 
     </header>
 
+    <!-- ==========================
+            MAIN
+    =========================== -->
 
-    <!-- =========================================
-         CONTEÚDO PRINCIPAL
-    ========================================== -->
+    <main> <!-- HERO -->
 
-    <main>
-
-
-        <!-- APRESENTAÇÃO -->
-
-        <section class="py-5">
+        <section class="hero py-5">
 
             <div class="container">
 
-                <div class="row align-items-center py-5">
-
+                <div class="row align-items-center gy-5">
 
                     <!-- Texto -->
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
 
                         <span class="badge bg-primary mb-3">
-                            Sistema de Gestão
+                            Descubra Contagem
                         </span>
 
-                        <h1 class="display-4 fw-bold">
+                        <h1 class="display-5 fw-bold mb-4">
 
-                            Gerencie seus cadastros
-                            de forma simples
+                            Tudo o que acontece em Contagem em um só lugar.
 
                         </h1>
 
-                        <p class="lead text-muted mt-3">
+                        <p class="lead text-muted mb-4">
 
-                            Um sistema para gerenciamento de
-                            produtos, clientes e funcionários.
-
-                        </p>
-
-                        <p class="text-muted">
-
-                            Desenvolvido com PHP, MVC, Bootstrap,
-                            JavaScript, jQuery e validação de dados.
+                            Encontre eventos, notícias, atrações,
+                            gastronomia, cultura e serviços da cidade.
 
                         </p>
 
+                        <div class="d-flex gap-3">
 
-                        <!-- Botões -->
+                            <a href="#" class="btn btn-primary btn-lg">
 
-                        <div class="mt-4">
+                                Explorar
 
-                            <a href="index.php?page=login"
-                                class="btn btn-primary btn-lg">
+                            </a>
 
-                                <i class="bi bi-box-arrow-in-right me-2"></i>
+                            <a href="#" class="btn btn-outline-primary btn-lg">
 
-                                Acessar o sistema
+                                Saiba mais
 
                             </a>
 
@@ -124,72 +148,75 @@
 
                     </div>
 
+                    <!-- Imagem -->
 
-                    <!-- Card visual -->
+                    <div class="col-lg-5 text-center">
 
-                    <div class="col-lg-6 mt-5 mt-lg-0">
+                        <img src="assets/img/cidade.jpg" class="img-fluid hero-img" alt="Cidade">
 
-                        <div class="card border-0 shadow-lg">
+                    </div>
 
-                            <div class="card-body p-5">
+                    <!-- Login -->
 
-                                <div class="text-center mb-4">
+                    <div class="col-lg-3">
 
-                                    <i class="bi bi-speedometer2 display-1 text-primary"></i>
+                        <div class="card shadow border-0">
 
-                                    <h3 class="mt-3">
-                                        Sistema de Cadastros
-                                    </h3>
+                            <div class="card-body p-4">
 
-                                    <p class="text-muted">
+                                <h3 class="mb-4 text-center">
 
-                                        Organize as principais
-                                        informações em um único lugar.
+                                    Entrar
 
-                                    </p>
+                                </h3>
+                                <form id="FormLogin">
+                                    <div class="mb-3">
 
-                                </div>
+                                        <label for="email" class="form-label">
 
+                                            E-mail
 
-                                <div class="row text-center">
+                                        </label>
 
-                                    <!-- Produto -->
-
-                                    <div class="col-4">
-
-                                        <i class="bi bi-box-seam fs-2 text-primary"></i>
-
-                                        <p class="mt-2 mb-0">
-                                            Produtos
-                                        </p>
+                                        <input type="email" class="form-control" placeholder="Digite seu e-mail"
+                                            id="email">
+                                        <div class="invalid-feedback" id="erroEmail">
+                                            Digite um e-mail válido.
+                                        </div>
 
                                     </div>
 
+                                    <div class="mb-4">
 
-                                    <!-- Cliente -->
+                                        <label for="senha" class="form-label">
 
-                                    <div class="col-4">
+                                            Senha
 
-                                        <i class="bi bi-people fs-2 text-primary"></i>
+                                        </label>
 
-                                        <p class="mt-2 mb-0">
-                                            Clientes
-                                        </p>
-
-                                    </div>
-
-
-                                    <!-- Funcionário -->
-
-                                    <div class="col-4">
-
-                                        <i class="bi bi-person-badge fs-2 text-primary"></i>
-
-                                        <p class="mt-2 mb-0">
-                                            Funcionários
-                                        </p>
+                                        <input type="password" class="form-control" placeholder="Digete sua senha"
+                                            id="senha">
+                                        <div class="invalid-feedback" id="erroEmail">
+                                            Digite uma senha válida.
+                                        </div>
 
                                     </div>
+
+                                    <a href="index.php?page=login"
+                                        class="btn btn-primary w-100 mb-3">
+                                        <i class="bi bi-lock me-2"></i>
+                                        Entrar
+                                    </a>
+
+
+                                </form>
+                                <div class="text-center">
+
+                                    <a href="#">
+
+                                        Esqueci minha senha
+
+                                    </a>
 
                                 </div>
 
@@ -205,200 +232,298 @@
 
         </section>
 
+        <!-- BENEFÍCIOS -->
 
-        <!-- =========================================
-             RECURSOS
-        ========================================== -->
-
-        <section class="bg-white py-5">
+        <section class="py-5 bg-light">
 
             <div class="container">
 
-                <div class="text-center mb-5">
+                <div class="row text-center g-4">
 
-                    <h2>
-                        Recursos do sistema
-                    </h2>
+                    <div class="col-lg-3">
 
-                    <p class="text-muted">
+                        <div class="card h-100 border-0 shadow-sm">
 
-                        Funcionalidades disponíveis
-                        na área administrativa.
+                            <div class="card-body">
+
+                                <i class="bi bi-calendar-event display-5 text-primary"></i>
+
+                                <h4 class="mt-3">
+
+                                    Eventos
+
+                                </h4>
+
+                                <p>
+
+                                    Descubra tudo o que acontece
+                                    em Contagem.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3">
+
+                        <div class="card h-100 border-0 shadow-sm">
+
+                            <div class="card-body">
+
+                                <i class="bi bi-newspaper display-5 text-primary"></i>
+
+                                <h4 class="mt-3">
+
+                                    Notícias
+
+                                </h4>
+
+                                <p>
+
+                                    Fique por dentro das novidades
+                                    da cidade.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3">
+
+                        <div class="card h-100 border-0 shadow-sm">
+
+                            <div class="card-body">
+
+                                <i class="bi bi-geo-alt display-5 text-primary"></i>
+
+                                <h4 class="mt-3">
+
+                                    Turismo
+
+                                </h4>
+
+                                <p>
+
+                                    Conheça pontos turísticos
+                                    incríveis.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3">
+
+                        <div class="card h-100 border-0 shadow-sm">
+
+                            <div class="card-body">
+
+                                <i class="bi bi-shop display-5 text-primary"></i>
+
+                                <h4 class="mt-3">
+
+                                    Comércio
+
+                                </h4>
+
+                                <p>
+
+                                    Apoie empresas e negócios
+                                    locais.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section> <!-- FOOTER -->
+
+    </main>
+
+    <footer class="footer bg-dark text-light pt-5 pb-3">
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <!-- Logo -->
+
+                <div class="col-lg-3">
+
+                    <h3 class="fw-bold">
+
+                        Contagem 360
+
+                    </h3>
+
+                    <p>
+
+                        O portal oficial para quem deseja descobrir,
+                        viver e aproveitar tudo o que Contagem tem
+                        para oferecer.
 
                     </p>
 
-                </div>
+                    <div class="d-flex gap-3 fs-4">
 
+                        <a href="#" class="text-light">
+                            <i class="bi bi-facebook"></i>
+                        </a>
 
-                <div class="row g-4">
+                        <a href="#" class="text-light">
+                            <i class="bi bi-instagram"></i>
+                        </a>
 
-
-                    <!-- Produtos -->
-
-                    <div class="col-md-4">
-
-                        <div class="card h-100 border-0 shadow-sm">
-
-                            <div class="card-body text-center p-4">
-
-                                <i class="bi bi-box-seam fs-1 text-primary"></i>
-
-                                <h5 class="mt-3">
-                                    Produtos
-                                </h5>
-
-                                <p class="text-muted">
-
-                                    Cadastre e gerencie
-                                    os produtos do sistema.
-
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Clientes -->
-
-                    <div class="col-md-4">
-
-                        <div class="card h-100 border-0 shadow-sm">
-
-                            <div class="card-body text-center p-4">
-
-                                <i class="bi bi-people fs-1 text-primary"></i>
-
-                                <h5 class="mt-3">
-                                    Clientes
-                                </h5>
-
-                                <p class="text-muted">
-
-                                    Organize os dados dos
-                                    clientes cadastrados.
-
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Funcionários -->
-
-                    <div class="col-md-4">
-
-                        <div class="card h-100 border-0 shadow-sm">
-
-                            <div class="card-body text-center p-4">
-
-                                <i class="bi bi-person-badge fs-1 text-primary"></i>
-
-                                <h5 class="mt-3">
-                                    Funcionários
-                                </h5>
-
-                                <p class="text-muted">
-
-                                    Gerencie os funcionários
-                                    cadastrados no sistema.
-
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             CHAMADA PARA LOGIN
-        ========================================== -->
-
-        <section class="py-5">
-
-            <div class="container">
-
-                <div class="card bg-primary text-white border-0">
-
-                    <div class="card-body text-center p-5">
-
-                        <h2>
-                            Pronto para acessar?
-                        </h2>
-
-                        <p class="mb-4">
-
-                            Entre na área administrativa
-                            para acessar os cadastros.
-
-                        </p>
-
-                        <a href="index.php?page=login"
-                            class="btn btn-light btn-lg">
-
-                            <i class="bi bi-lock me-2"></i>
-
-                            Entrar no sistema
-
+                        <a href="#" class="text-light">
+                            <i class="bi bi-youtube"></i>
                         </a>
 
                     </div>
 
                 </div>
 
-            </div>
+                <!-- Links -->
 
-        </section>
+                <div class="col-lg-2">
 
+                    <h5 class="mb-3">
 
-    </main>
+                        Navegação
 
+                    </h5>
 
-    <!-- =========================================
-         RODAPÉ DA LANDING PAGE
-    ========================================== -->
+                    <ul class="list-unstyled">
 
-    <footer class="bg-dark text-white py-4">
+                        <li><a href="#" class="text-light text-decoration-none">Home</a></li>
 
-        <div class="container">
+                        <li><a href="#" class="text-light text-decoration-none">Eventos</a></li>
 
-            <div class="row align-items-center">
+                        <li><a href="#" class="text-light text-decoration-none">Notícias</a></li>
 
-                <div class="col-md-6 text-center text-md-start">
+                        <li><a href="#" class="text-light text-decoration-none">Turismo</a></li>
 
-                    <strong>
-                        Sistema MVC
-                    </strong>
+                    </ul>
 
-                    <p class="text-white-50 mb-0">
+                </div>
 
-                        Sistema de gerenciamento de cadastros.
+                <!-- Serviços -->
+
+                <div class="col-lg-2">
+
+                    <h5 class="mb-3">
+
+                        Serviços
+
+                    </h5>
+
+                    <ul class="list-unstyled">
+
+                        <li><a href="#" class="text-light text-decoration-none">Comércio</a></li>
+
+                        <li><a href="#" class="text-light text-decoration-none">Projetos</a></li>
+
+                        <li><a href="#" class="text-light text-decoration-none">Mapa</a></li>
+
+                        <li><a href="#" class="text-light text-decoration-none">Contato</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contato -->
+
+                <div class="col-lg-2">
+
+                    <h5 class="mb-3">
+
+                        Contato
+
+                    </h5>
+
+                    <p class="mb-1">
+
+                        (31) 99999-9999
+
+                    </p>
+
+                    <p class="mb-1">
+
+                        contato@contagem360.com
+
+                    </p>
+
+                    <p>
+
+                        Contagem - MG
 
                     </p>
 
                 </div>
 
+                <!-- Newsletter -->
 
-                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                <div class="col-lg-3">
 
-                    <span class="text-white-50">
+                    <h5 class="mb-3">
 
-                        Projeto desenvolvido com PHP e Bootstrap
+                        Newsletter
 
-                    </span>
+                    </h5>
+
+                    <p>
+
+                        Receba novidades e eventos.
+
+                    </p>
+
+                    <form>
+
+                        <div class="input-group">
+
+                            <input type="email" class="form-control" placeholder="Seu e-mail">
+
+                            <button class="btn btn-primary" type="submit">
+
+                                Enviar
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row">
+
+                <div class="col text-center">
+
+                    <small>
+
+                        © 2026 Contagem 360.
+                        Todos os direitos reservados.
+
+                    </small>
 
                 </div>
 
@@ -408,11 +533,12 @@
 
     </footer>
 
-
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
+
 </body>
+<script src="script.js"></script>
 
 </html>

@@ -56,7 +56,7 @@ http_response_code(200);
 
 echo json_encode([
     "sucesso" => true,
-    "mensagem" => "Cliente cadastrado com sucesso (controllerCliente).",
+    "mensagem" => "Evento cadastrado com sucesso (controllerEvento).",
     "dados" => $validator->data(),
     "erros" => null
 ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
@@ -71,44 +71,44 @@ exit;
 function validarCadastro($validator)
 {
     // Nome
-    $validator->required("nome", "O nome do cliente é obrigatório. (controllerCliente)");
+    $validator->required("Evento", "O nome do Evento é obrigatório. (controllerEvento)");
 
-    $validator->string("nome", "O nome do cliente deve ser um texto válido. (controllerCliente)");
+    $validator->string("Evento", "O nome do Evento deve ser um texto válido. (controllerEvento)");
 
     $validator->minLength(
-        "nome",
+        "Evento",
         3,
-        "O nome do cliente deve conter no mínimo 3 caracteres. (controllerCliente)"
+        "O nome do Evento deve conter no mínimo 3 caracteres. (controllerEvento)"
     );
 
     $validator->maxLength(
-        "nome",
+        "Evento",
         100,
-        "O nome do cliente deve conter no máximo 100 caracteres. (controllerCliente)"
+        "O nome do Evento deve conter no máximo 100 caracteres. (controllerEvento)"
     );
 
 
-    // CPF
+    // Categoria
     $validator->required(
-        "cpf",
-        "O CPF do cliente é obrigatório. (controllerCliente)"
+        "Categoria",
+        "A Categoria é obrigatória. (controllerEvento)"
     );
 
     $validator->string(
-        "cpf",
-        "O CPF do cliente deve ser um texto válido. (controllerCliente)     "
+        "Categoria",
+        "A Categoria deve ser um texto válido. (controllerEvento)     "
     );
 
     $validator->minLength(
         "cpf",
         11,
-        "O CPF do cliente deve conter 11 dígitos. (controllerCliente)"
+        "O CPF do cliente deve conter 11 dígitos. (controllerEvento)"
     );
 
     $validator->maxLength(
         "cpf",
         11,
-        "O CPF do cliente deve conter 11 dígitos. (controllerCliente)"
+        "O CPF do cliente deve conter 11 dígitos. (controllerEvento)"
     );
 
 

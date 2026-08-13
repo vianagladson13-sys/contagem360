@@ -2,10 +2,10 @@
 
     <!-- Título -->
     <div class="mb-5">
-        <h2>Sistema de Cadastros</h2>
+        <h2>Contagem360</h2>
 
         <p class="text-muted">
-            Selecione uma das opções abaixo para acessar os cadastros do sistema.
+            Olá Gladson, seja bem vindo ao Sistema Administrativo
         </p>
     </div>
 
