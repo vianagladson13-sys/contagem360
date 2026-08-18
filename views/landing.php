@@ -29,73 +29,83 @@
 
     <header>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-1">
 
-            <div class="container">
+        <div class="container">
 
-                <!-- Logo -->
+            <!-- Logo -->
 
-                <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
 
-                    <img src="assets/img/logo.png" alt="Logo Contagem 360" width="150" class="me-2">
-                    <div>
+                <img
+                    src="assets/img/logo.png"
+                    alt="Logo Contagem 360"
+                    width="120"
+                    class="me-2">
 
-                        <h4 class="m-0">Contagem <span id="xbox">360</span></h4>
+                <div>
 
-                        <small class="text-muted">
-                            Turismo • Cultura • Eventos
-                        </small>
+                    <h4 class="m-0">
+                        Contagem <span id="xbox">360</span>
+                    </h4>
 
-                    </div>
+                    <small class="text-muted">
+                        Turismo • Cultura • Eventos
+                    </small>
 
-                </a>
+                </div>
 
-                <!-- Botão Mobile -->
+            </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <!-- Botão Mobile -->
 
-                    <span class="navbar-toggler-icon"></span>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
 
-                </button>
+                <span class="navbar-toggler-icon"></span>
 
-                <!-- Menu -->
+            </button>
 
-                <div class="collapse navbar-collapse" id="menu">
+            <!-- Menu -->
 
-                    <ul class="navbar-nav mx-auto">
+            <div class="collapse navbar-collapse" id="menu">
 
-                       
+                <ul class="navbar-nav mx-auto">
 
-                    </ul>
+                </ul>
 
-                    <!-- Lado direito -->
+                <!-- Lado direito -->
 
-                    <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center">
 
-                        <button class="btn btn-link text-dark me-3">
+                    <button class="btn btn-link text-dark me-3">
 
-                            <i class="bi bi-search fs-5"></i>
+                        <i class="bi bi-search fs-5"></i>
 
-                        </button>
+                    </button>
 
+                    <a
+                        href="index.php?page=login"
+                        class="btn btn-primary rounded-pill px-4">
 
+                        <i class="bi bi-lock me-2"></i>
 
-                        <a href="index.php?page=login"
-                            class="btn btn-primary rounded-pill px-4">
-                            <i class="bi bi-lock me-2"></i>
-                            Entrar
-                        </a>
+                        Entrar
 
-
-                    </div>
+                    </a>
 
                 </div>
 
             </div>
 
-        </nav>
+        </div>
 
-    </header>
+    </nav>
+
+</header>
 
     <!-- ==========================
             MAIN

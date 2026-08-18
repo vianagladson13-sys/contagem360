@@ -158,7 +158,7 @@
                 <!-- Identificação -->
                 <p class="text-center text-muted small mt-4">
 
-                    Sistema MVC de Cadastros
+                    Contagem360
 
                 </p>
 

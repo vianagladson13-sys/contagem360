@@ -6,68 +6,122 @@
     <h2>Cadastro de clientes</h2>
 
     <!-- Formulário -->
-    <form id="formCliente">
+    <form id="formCliente" method="POST">
 
-        <!-- Nome -->
-        <div class="mb-3">
-            <label for="nome" class="form-label">Nome</label>
-            <div class="input-group">
-                <span class="input-group-text"> <i class="bi bi-person"></i></span>
-                <input type="text" id="nome" name="nome" class="form-control">
+<!-- Nome -->
+<div class="mb-3">
 
-                <div class="invalid-feedback"></div>
-                <div class="valid-feedback"></div>
-            </div>
-        </div>
+    <label for="nome" class="form-label">
+        Nome
+    </label>
 
-        <!-- CPF -->
-        <div class="mb-3">
-            <label for="cpf" class="form-label">CPF</label>
-            <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-card-text"></i></span>
-                <input type="text" id="cpf" name="cpf" class="form-control">
+    <div class="input-group">
 
-                <div class="invalid-feedback"></div>
-                <div class="valid-feedback"></div>
-            </div>
-        </div>
+        <span class="input-group-text">
+            <i class="bi bi-person"></i>
+        </span>
 
-        <!-- E-mail -->
-        <div class="mb-3">
-            <label for="email" class="form-label">E-mail</label>
-            <div class="input-group">
-                <span class="input-group-text">
-                    <i class="bi bi-envelope"></i>
-                </span>
+        <input
+            type="text"
+            id="nome"
+            name="nome"
+            class="form-control">
 
-                <input type="email" id="email" name="email" class="form-control">
+        <div class="invalid-feedback"></div>
+        <div class="valid-feedback"></div>
 
-                <div class="invalid-feedback"></div>
-                <div class="valid-feedback"></div>
-            </div>
-        </div>
+    </div>
 
-        <!-- Telefone -->
-        <div class="mb-3">
-            <label for="telefone" class="form-label">Telefone</label>
-            <div class="input-group">
-                <span class="input-group-text">
-                    <i class="bi bi-telephone"></i>
-                </span>
+</div>
 
-                <input type="text" id="telefone" name="telefone" class="form-control">
+<!-- CPF -->
+<div class="mb-3">
 
-                <div class="invalid-feedback"></div>
-                <div class="valid-feedback"></div>
-            </div>
-        </div>
+    <label for="cpf" class="form-label">
+        CPF
+    </label>
 
-        <!-- Botão -->
-        <button type="submit" class="btn btn-primary w-100">
-            Cadastrar
-        </button>
+    <div class="input-group">
 
-    </form>
+        <span class="input-group-text">
+            <i class="bi bi-card-text"></i>
+        </span>
+
+        <input
+            type="text"
+            id="cpf"
+            name="cpf"
+            class="form-control">
+
+        <div class="invalid-feedback"></div>
+        <div class="valid-feedback"></div>
+
+    </div>
+
+</div>
+
+<!-- E-mail -->
+<div class="mb-3">
+
+    <label for="email" class="form-label">
+        E-mail
+    </label>
+
+    <div class="input-group">
+
+        <span class="input-group-text">
+            <i class="bi bi-envelope"></i>
+        </span>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control">
+
+        <div class="invalid-feedback"></div>
+        <div class="valid-feedback"></div>
+
+    </div>
+
+</div>
+
+<!-- Telefone -->
+<div class="mb-3">
+
+    <label for="telefone" class="form-label">
+        Telefone
+    </label>
+
+    <div class="input-group">
+
+        <span class="input-group-text">
+            <i class="bi bi-telephone"></i>
+        </span>
+
+        <input
+            type="text"
+            id="telefone"
+            name="telefone"
+            class="form-control">
+
+        <div class="invalid-feedback"></div>
+        <div class="valid-feedback"></div>
+
+    </div>
+
+</div>
+
+<button
+    type="submit"
+    class="btn btn-primary w-100">
+
+    <i class="bi bi-person-plus me-1"></i>
+    Cadastrar
+
+</button>
+
+</form>
 
     <!-- Mensagem de retorno -->
     <div id="mensagem" class="alert d-none mt-3"></div>

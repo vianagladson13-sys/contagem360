@@ -1,29 +1,29 @@
 <!-- CSS da página -->
-<link rel="stylesheet" href="assets/css/landing.css">
+<link rel="stylesheet" href="assets/css/evento.css">
 
 <section>
 
     <section class="py-5 bg-light">
 
         <div class="container">
-    
+
             <div class="row justify-content-center">
-    
+
                 <div class="col-lg-8">
-    
+
                     <div class="card shadow-lg border-0 rounded-4 position-relative">
-    
+
                         <!-- Botão Fechar -->
                         <button type="button"
                             class="btn btn-fechar position-absolute top-0 end-0 m-3"
                             onclick="history.back()">
-    
+
                             <i class="bi bi-x-lg fs-4"></i>
-    
+
                         </button>
-    
+
                         <div class="card-body p-5">
-    
+
                             <h2 class="text-center fw-bold mb-4">
                                 <i class="bi bi-calendar-event text-primary"></i>
                                 Cadastro de Evento
@@ -37,14 +37,15 @@
 
                                         <label for="nomeEvento" class="form-label">
                                             Nome do Evento
-                                        </label>
+                                            <input type="text"
+                                                class="form-control"
+                                                id="nomeEvento"
+                                                name="nomeEvento"
+                                                placeholder="Digite o nome do evento">
 
-                                        <input type="text" class="form-control" id="nomeEvento "   name="nomeEvento"
-                                            placeholder="Digite o nome do evento">
-
-                                        <div class="invalid-feedback">
-                                            Informe o nome do evento.
-                                        </div>
+                                            <div class="invalid-feedback">
+                                                Informe o nome do evento.
+                                            </div>
 
                                     </div>
 
@@ -54,7 +55,7 @@
                                             Categoria
                                         </label>
 
-                                        <select class="form-select" id="categoria"   name="categoria">
+                                        <select class="form-select" id="categoria" name="categoria">
 
                                             <option value="" selected>
                                                 Selecione
@@ -84,7 +85,7 @@
                                             Data
                                         </label>
 
-                                        <input type="date" class="form-control" id="dataEvento"  name="dataEvento">
+                                        <input type="date" class="form-control" id="dataEvento" name="dataEvento">
 
                                         <div class="invalid-feedback">
                                             Informe a data.
@@ -146,7 +147,7 @@
                                             Organizador
                                         </label>
 
-                                        <input type="text" class="form-control" id="organizador"  name="organizador">
+                                        <input type="text" class="form-control" id="organizador" name="organizador">
                                         <div class="invalid-feedback">
                                             Informe o nome do Organizador.
                                         </div>
@@ -159,7 +160,7 @@
                                             Contato
                                         </label>
 
-                                        <input type="tel" class="form-control" id="contato"  name="contato"
+                                        <input type="tel" class="form-control" id="contato" name="contato"
                                             placeholder="(31) 99999-9999">
                                         <div class="invalid-feedback">
                                             Informe o numero de contato.
@@ -214,11 +215,11 @@
     </section>
 
     <!-- Bootstrap -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </section>
+
 
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -226,8 +227,11 @@
 <!-- jQuery Validation -->
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 
+<!-- Métodos adicionais -->
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+
 <!-- jQuery Mask -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
-<!-- Script da página -->
+<!-- Seu JavaScript -->
 <script src="assets/js/evento.js"></script>
